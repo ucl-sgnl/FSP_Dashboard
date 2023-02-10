@@ -12,13 +12,14 @@ import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
+import TimelineIcon from '@mui/icons-material/Timeline';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import DataArrayOutlinedIcon from '@mui/icons-material/DataArrayOutlined';
 import { Bar } from '@nivo/bar';
+import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
 
 const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
@@ -69,12 +70,13 @@ const SideBar = () => {
                 {/* LOGO AND MENU ICON */}
                 <MenuItem
                     onClick={() => setIsCollapsed(!isCollapsed)}
-                    icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+                    icon={isCollapsed ? <HomeOutlinedIcon /> : undefined}
                     style={{
                     margin: "10px 0 20px 0",
                     color: colors.grey[100],
                     }}
                 >
+                    {/* What does it show when it is collapsed */}
                     {!isCollapsed && (
                     <Box
                         display="flex"
@@ -86,7 +88,7 @@ const SideBar = () => {
                         SGNL
                         </Typography>
                         <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                            <MenuOutlinedIcon />
+                            <HomeOutlinedIcon />
                         </IconButton>
                     </Box>
                     )}
@@ -121,16 +123,25 @@ const SideBar = () => {
 
                     {/* Menu items */}
                     <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+
+                        <Typography
+                        variant="h6"
+                        color={colors.grey[300]}
+                        sx={{ m: "15px 0 5px 20px" }}
+                        >
+                        Data
+                        </Typography>
+
                         <Item 
                         title="Dashboard" 
                         to="/" 
-                        icon={<MenuOutlinedIcon/>} 
+                        icon={<DataArrayOutlinedIcon/>} 
                         selected={selected} 
                         setSelected={setSelected} />
 
                         <Item 
                         title="Manage Team" 
-                        to="/people" 
+                        to="/team" 
                         icon={<PeopleOutlinedIcon />} 
                         selected={selected} 
                         setSelected={setSelected} />
@@ -147,6 +158,14 @@ const SideBar = () => {
                         to="/invoices" 
                         icon={<ReceiptOutlinedIcon />} selected={selected} setSelected={setSelected} />
 
+                        <Typography
+                        variant="h6"
+                        color={colors.grey[300]}
+                        sx={{ m: "15px 0 5px 20px" }}
+                        >
+                        People
+                        </Typography>
+
                         <Item 
                         title="Profile Form" 
                         to="/form" 
@@ -155,13 +174,15 @@ const SideBar = () => {
                         <Item 
                         title="Calender" 
                         to="/calender" 
-                        icon={<ContactsOutlinedIcon />} selected={selected} setSelected={setSelected} />
-
-                        <Item 
-                        title="FAQ Page" 
-                        to="/faq" 
-                        icon={<ContactsOutlinedIcon />} selected={selected} setSelected={setSelected} />
-
+                        icon={<CalendarTodayOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        
+                        <Typography
+                        variant="h6"
+                        color={colors.grey[300]}
+                        sx={{ m: "15px 0 5px 20px" }}
+                        >
+                        Charts
+                        </Typography>
                         <Item 
                         title="Bar Chart" 
                         to="/bar" 
@@ -175,7 +196,17 @@ const SideBar = () => {
                         <Item 
                         title="Line Chart" 
                         to="/line" 
-                        icon={<ContactsOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        icon={<TimelineIcon />} selected={selected} setSelected={setSelected} />
+
+                        <Item 
+                        title="Mapping" 
+                        to="/mapping" 
+                        icon={<MapOutlinedIcon />} selected={selected} setSelected={setSelected} />
+
+                        <Item 
+                        title="FAQ Page" 
+                        to="/faq" 
+                        icon={<LiveHelpOutlinedIcon />} selected={selected} setSelected={setSelected} />
                     </Box>
                 </Menu>
             </ProSidebar>
