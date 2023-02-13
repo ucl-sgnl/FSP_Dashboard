@@ -9,17 +9,15 @@ import Typography from '@mui/material/Typography';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineIcon from '@mui/icons-material/Timeline';
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import DataArrayOutlinedIcon from '@mui/icons-material/DataArrayOutlined';
-import { Bar } from '@nivo/bar';
 import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
+import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
+import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 
 const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
@@ -85,7 +83,7 @@ const SideBar = () => {
                         ml="15px"
                     >
                         <Typography variant="h3" color={colors.grey[100]}>
-                        SGNL
+                        Menu
                         </Typography>
                         <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                             <HomeOutlinedIcon />
@@ -101,21 +99,21 @@ const SideBar = () => {
                         alt="profile-user"
                         width="100px"
                         height="100px"
-                        src={`../../assets/indigo.png`}
+                        src={`../../assets/SGNL_logo_WhiteonAlpha.png`}
                         style={{ cursor: "pointer", borderRadius: "50%" }}
                         />
                     </Box>
                     <Box textAlign="center">
                         <Typography
-                        variant="h2"
+                        variant="h4"
                         color={colors.grey[100]}
                         fontWeight="bold"
                         sx={{ m: "10px 0 0 0" }}
                         >
-                        Indigo
+                        Satellite Geodesy & Navigation Laboratory
                         </Typography>
                         <Typography variant="h5" color={colors.greenAccent[500]}>
-                        Admin
+                        University College London
                         </Typography>
                     </Box>
                     </Box>
@@ -124,7 +122,7 @@ const SideBar = () => {
                     {/* Menu items */}
                     <Box paddingLeft={isCollapsed ? undefined : "10%"}>
 
-                        <Typography
+                        {/* <Typography
                         variant="h6"
                         color={colors.grey[300]}
                         sx={{ m: "15px 0 5px 20px" }}
@@ -133,18 +131,12 @@ const SideBar = () => {
                         </Typography>
 
                         <Item 
-                        title="Dashboard" 
-                        to="/" 
-                        icon={<DataArrayOutlinedIcon/>} 
+                        title="Orbital View" 
+                        to="/globe" 
+                        icon={<PublicOutlinedIcon/>} 
                         selected={selected} 
                         setSelected={setSelected} />
 
-                        <Item 
-                        title="Manage Team" 
-                        to="/team" 
-                        icon={<PeopleOutlinedIcon />} 
-                        selected={selected} 
-                        setSelected={setSelected} />
 
                         <Item 
                         title="Contacts Information" 
@@ -152,27 +144,58 @@ const SideBar = () => {
                         icon={<ContactsOutlinedIcon />} 
                         selected={selected} 
                         setSelected={setSelected} />
+                         */}
 
-                        <Item 
-                        title="Invoices + Balances" 
-                        to="/invoices" 
-                        icon={<ReceiptOutlinedIcon />} selected={selected} setSelected={setSelected} />
-
+                        {isCollapsed && (
                         <Typography
                         variant="h6"
                         color={colors.grey[300]}
                         sx={{ m: "15px 0 5px 20px" }}
                         >
-                        People
+                        FSP
                         </Typography>
+                        )}
+
+                        {!isCollapsed && (
+                        <Typography
+                        variant="h6"
+                        color={colors.grey[300]}
+                        sx={{ m: "15px 0 5px 20px" }}
+                        >
+                        Future Space Populations
+                        </Typography>
+                        )}
+             
+                        <Item 
+                        title="Overview" 
+                        to="/" 
+                        icon={<DataArrayOutlinedIcon/>} 
+                        selected={selected} 
+                        setSelected={setSelected} />
 
                         <Item 
-                        title="Profile Form" 
-                        to="/form" 
-                        icon={<PersonOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        title="Orbital View" 
+                        to="/globe" 
+                        icon={<PublicOutlinedIcon/>} 
+                        selected={selected} 
+                        setSelected={setSelected} />
 
                         <Item 
-                        title="Calender" 
+                        title="Catalogue" 
+                        to="/catalogue" 
+                        icon={<DnsOutlinedIcon />} 
+                        selected={selected} 
+                        setSelected={setSelected} />
+
+                        <Item 
+                        title="Box Score" 
+                        to="/boxscore" 
+                        icon={<DnsOutlinedIcon />} 
+                        selected={selected} 
+                        setSelected={setSelected} />
+
+                        <Item 
+                        title="Upcoming Launches" 
                         to="/calender" 
                         icon={<CalendarTodayOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         
@@ -200,7 +223,7 @@ const SideBar = () => {
 
                         <Item 
                         title="Mapping" 
-                        to="/mapping" 
+                        to="/map" 
                         icon={<MapOutlinedIcon />} selected={selected} setSelected={setSelected} />
 
                         <Item 

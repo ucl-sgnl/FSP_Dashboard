@@ -5,16 +5,16 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import TopBar from './scenes/global/TopBar';
 import SideBar from './scenes/global/SideBar';
 import Dashboard from './scenes/dashboard';
-import Team from './scenes/team';
-//import Invoice from './scenes/invoice';
-import Contacts from './scenes/contacts';
-//import Bar from './scenes/bar';
-//import Form from './scenes/form';
-//import Line from './scenes/line';
-//import Pie from './scenes/pie';
-//import FAQ from './scenes/faq';
-//import Geography from './scenes/geography';
-//import Calender from './scenes/calender';
+import Boxscore from './scenes/Boxscore';
+import Catalogue from './scenes/catalogue';
+import Bar from './scenes/bar';
+import Globe from './scenes/globe';
+import Line from './scenes/line';
+import Pie from './scenes/pie';
+import FAQ from './scenes/faq';
+import Map from './scenes/map';
+// import Calender from './scenes/calender';
+import { BarChart } from '@mui/icons-material';
 
 
 function App() {
@@ -30,15 +30,14 @@ function App() {
                         <TopBar/>
                         <Routes>
                             <Route path="/" element={<Dashboard />} />
-                            <Route path="/team" element={<Team />} />
-                            {/* <Route path="/invoice" element={<Invoice />} /> */}
-                            <Route path="/contacts" element={<Contacts />} />
-                            {/* <Route path="/bar" element={<Bar />} /> */}
-                            {/* <Route path="/form" element={<Form />} /> */}
-                            {/* <Route path="/line" element={<Line />} /> */}
-                            {/* <Route path="/pie" element={<Pie />} /> */}
-                            {/* <Route path="/faq" element={<FAQ />} /> */}
-                            {/* <Route path="/geography" element={<Geography />} /> */}
+                            <Route path="/boxscore" element={<Boxscore />} />
+                            <Route path="/catalogue" element={<Catalogue />} />
+                            <Route path="/bar" element={<Bar />} />
+                            <Route path="/globe" element={<Globe />} />
+                            <Route path="/line" element={<Line />} />
+                            <Route path="/pie" element={<Pie />} />
+                            <Route path="/faq" element={<FAQ />} />
+                            <Route path="/map" element={<Map />} />
                             {/* <Route path="/calender" element={<Calender />} /> */}
                         </Routes>
                     </main>
