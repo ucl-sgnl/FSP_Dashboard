@@ -1,11 +1,9 @@
-import { Box, IconButton, useTheme } from "@mui/system";
+import { Box, useTheme } from "@mui/system";
 import { Link } from 'react-router-dom';
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
-import { mockTransactions } from "../../data/mockData";
-import Team from "../Boxscore";
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
@@ -16,10 +14,8 @@ import SettingsOverscanOutlinedIcon from '@mui/icons-material/SettingsOverscanOu
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";
-import MapView from "../../components/MapView";
 import StatBox from "../../components/StatBox";
-import ProgressCircle from "../../components/ProgressCircle";
-import { Pie } from "@nivo/pie";
+
 
 const ExpandButton = ({to}) => {
     const theme = useTheme();
@@ -37,12 +33,11 @@ const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
-
     return (
     <Box m="20px">
         <Box display="flex" justifyContent="space-between" alignItems="center">
             <Header title="FSP Overview" subtitle="Welcome to your dashboard"></Header>
-            <Box>
+            <Box margin="10px">
                 <Button sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontsize: "14px", fontWeight: "bold", padding: "10px 20px", alignContent: "right"}}>
                     <FileDownloadOutlinedIcon sx={{ mr: "10px"}}/>
                     Download Reports
@@ -85,7 +80,7 @@ const Dashboard = () => {
             <Box gridColumn= "span 8" gridRow="span 2" backgroundColor={colors.primary[400]}>
                 <Box mt="20px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
                     <Typography variant="h5" fontWeight="600" color= {colors.grey[100]}>Total Satellites Launches</Typography>
-                    <ExpandButton to="/line" />
+                    <ExpandButton to="/enlarger/line" />
                 </Box>
                 <Box height="250px">
                     <LineChart></LineChart>
@@ -95,7 +90,7 @@ const Dashboard = () => {
             <Box gridColumn="span 4" gridRow="span 2" backgroundColor={colors.primary[400]}>
                 <Box mt="20px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
                     <Typography variant="h5" fontWeight="600" color= {colors.grey[100]}>2019-2023</Typography>
-                    <ExpandButton to="/bar" />
+                    <ExpandButton to="/enlarger/bar" />
                 </Box>
                 <Box height="250px">
                     <BarChart></BarChart>
@@ -104,9 +99,9 @@ const Dashboard = () => {
 
             {/* Row 3 */}
             <Box gridColumn="span 5" gridRow="span 2" backgroundColor={colors.primary[400]}>
-                <Box mt="20px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
+                <Box mt="20px" p="0 20px" display="flex" justifyContent="space-between" alignItems="center">
                     <Typography variant="h5" fontWeight="600" color= {colors.grey[100]}>2019-2023</Typography>
-                    <ExpandButton to="/pie" />
+                    <ExpandButton to="/enlarger/pie"/>
                 </Box>
                 <Box height="250px">
                     <PieChart></PieChart>

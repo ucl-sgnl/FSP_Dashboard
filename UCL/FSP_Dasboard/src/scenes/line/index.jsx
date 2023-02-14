@@ -1,16 +1,29 @@
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
-
+import BarChart from "../../components/BarChart";
+import PieChart from "../../components/PieChart";
+import MapView from "../../components/MapView";
+import { useParams } from "react-router-dom";
+import EnlargedItem from "../enlargeditem";
 
 const Line = () => {
+    let { graph } = useParams();
+    let props;
+
+    if (graph == "line") {
+        props = <LineChart />
+    } else if (graph == "bar") {
+        props = <BarChart />
+    } else if (graph == "pie") {
+        props = <PieChart />
+    } else if (graph == "map") {
+        props = <MapView />
+    }
+    
     return (
-        <Box m="20px">
-            <Header title="Pie Chart" subtitle="Pie Chart Interactive Page" />
-            <Box height= "75vh">
-                <LineChart years2019_2023={true}/>
-            </Box>
-        </Box>
+        <EnlargedItem graphComponent={props}>
+        </EnlargedItem>
     )
 }
 

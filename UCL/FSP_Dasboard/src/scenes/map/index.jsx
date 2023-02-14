@@ -1,16 +1,13 @@
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
 import MapView from "../../components/MapView";
+import EnlargedItem from "../enlargeditem";
 
 
 const Map = () => {
     return (
-        <Box m="20px">
-            <Header title="Pie Chart" subtitle="Pie Chart Interactive Page" />
-            <Box height= "75vh">
-                <MapView />
-            </Box>
-        </Box>
+        <EnlargedItem graphComponent={<MapView />}>
+        </EnlargedItem>
     )
 }
 

@@ -31,10 +31,10 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Dashboard />} />
                             <Route path="/boxscore" element={<Boxscore />} />
-                            <Route path="/catalogue" element={<Catalogue />} />
+                            <Route path="/catalogue" element={<Catalogue />}  />
                             <Route path="/bar" element={<Bar />} />
                             <Route path="/globe" element={<Globe />} />
-                            <Route path="/line" element={<Line />} />
+                            <Route path="/enlarger/:graph" element={<Line />} />
                             <Route path="/pie" element={<Pie />} />
                             <Route path="/faq" element={<FAQ />} />
                             <Route path="/map" element={<Map />} />
