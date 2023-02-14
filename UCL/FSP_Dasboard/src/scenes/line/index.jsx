@@ -8,7 +8,7 @@ const Line = () => {
         <Box m="20px">
             <Header title="Pie Chart" subtitle="Pie Chart Interactive Page" />
             <Box height= "75vh">
-                <LineChart />
+                <LineChart years2019_2023={true}/>
             </Box>
         </Box>
     )

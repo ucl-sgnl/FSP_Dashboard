@@ -13,6 +13,7 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineIcon from '@mui/icons-material/Timeline';
+import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import DataArrayOutlinedIcon from '@mui/icons-material/DataArrayOutlined';
 import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
@@ -199,7 +200,8 @@ const SideBar = () => {
                         to="/calender" 
                         icon={<CalendarTodayOutlinedIcon />} selected={selected} setSelected={setSelected} />
                         
-                        <Typography
+                        {/* Removed as now dashboard goes full screen to this links automatically  */}
+                        {/* <Typography
                         variant="h6"
                         color={colors.grey[300]}
                         sx={{ m: "15px 0 5px 20px" }}
@@ -224,12 +226,26 @@ const SideBar = () => {
                         <Item 
                         title="Mapping" 
                         to="/map" 
-                        icon={<MapOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        icon={<MapOutlinedIcon />} selected={selected} setSelected={setSelected} /> */}
+
+                        <Typography
+                        variant="h6"
+                        color={colors.grey[300]}
+                        sx={{ m: "15px 0 5px 20px" }}
+                        >
+                        About
+                        </Typography>
+
+                        <Item 
+                        title="Blog" 
+                        to="/faq" 
+                        icon={<BookOutlinedIcon />} selected={selected} setSelected={setSelected} />
 
                         <Item 
                         title="FAQ Page" 
                         to="/faq" 
                         icon={<LiveHelpOutlinedIcon />} selected={selected} setSelected={setSelected} />
+                        
                     </Box>
                 </Menu>
             </ProSidebar>

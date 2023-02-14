@@ -8,9 +8,7 @@ const Globe = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box>
-        <Viewer />
-    </Box>
+        <Viewer sx={{position: "relative", height: "100%"}}/>
   );
 }
 

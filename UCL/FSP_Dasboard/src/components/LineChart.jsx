@@ -1,6 +1,7 @@
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
+import { leoData } from "../data/leoData";
 
 const data = [
   {
@@ -170,13 +171,13 @@ const data = [
   },
 ];
 
-const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
+const LineChart = ({ isCustomLineColors = false, isDashboard = false, years2019_2023 = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
     <ResponsiveLine
-      data={data}
+      data={leoData}
       theme={{
         axis: {
           domain: {
@@ -210,9 +211,15 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           },
         },
       }}
+      enableArea={true}
       colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-      xScale={{ type: "point" }}
+      xScale={{ 
+        type: "time", 
+        format: '%Y-%m-%d', 
+        precision: 'day',
+      }}
+      xFormat="time:%Y-%m-%d"
       yScale={{
         type: "linear",
         min: "auto",
@@ -225,14 +232,21 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
       axisTop={null}
       axisRight={null}
       axisBottom={{
-        orient: "bottom",
-        tickSize: 0,
-        tickPadding: 5,
-        tickRotation: 0,
-        legend: isDashboard ? undefined : "transportation", // added
-        legendOffset: 36,
-        legendPosition: "middle",
-      }}
+        format: '%Y',
+        tickValues: 'every 10 years',
+        legendOffset: -12,
+    }}
+      // axisBottom={{
+      //   orient: "bottom",
+      //   tickSize: 0,
+      //   tickValues: 10,
+      //   tickCount: isDashboard ? 10 : 5, // added
+      //   tickPadding: 5,
+      //   tickRotation: 40,
+      //   legend: isDashboard ? undefined : "transportation", // added
+      //   legendOffset: 36,
+      //   legendPosition: "middle"
+      // }}
       axisLeft={{
         orient: "left",
         tickValues: 5, // added
@@ -245,7 +259,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
       }}
       enableGridX={false}
       enableGridY={false}
-      pointSize={8}
+      pointSize={0}
       pointColor={{ theme: "background" }}
       pointBorderWidth={2}
       pointBorderColor={{ from: "serieColor" }}
