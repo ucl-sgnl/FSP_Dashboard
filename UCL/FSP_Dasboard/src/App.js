@@ -7,12 +7,9 @@ import SideBar from './scenes/global/SideBar';
 import Dashboard from './scenes/dashboard';
 import Boxscore from './scenes/Boxscore';
 import Catalogue from './scenes/catalogue';
-import Bar from './scenes/bar';
+import EnlargedItem from './scenes/enlargeditem';
 import Globe from './scenes/globe';
-import Line from './scenes/line';
-import Pie from './scenes/pie';
 import FAQ from './scenes/faq';
-import Map from './scenes/map';
 // import Calender from './scenes/calender';
 import { BarChart } from '@mui/icons-material';
 
@@ -32,12 +29,9 @@ function App() {
                             <Route path="/" element={<Dashboard />} />
                             <Route path="/boxscore" element={<Boxscore />} />
                             <Route path="/catalogue" element={<Catalogue />}  />
-                            <Route path="/bar" element={<Bar />} />
                             <Route path="/globe" element={<Globe />} />
-                            <Route path="/enlarger/:graph" element={<Line />} />
-                            <Route path="/pie" element={<Pie />} />
+                            <Route path="/enlarger/:graph" element={<EnlargedItem />} />
                             <Route path="/faq" element={<FAQ />} />
-                            <Route path="/map" element={<Map />} />
                             {/* <Route path="/calender" element={<Calender />} /> */}
                         </Routes>
                     </main>

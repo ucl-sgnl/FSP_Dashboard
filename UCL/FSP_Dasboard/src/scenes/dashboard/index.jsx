@@ -15,12 +15,12 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";
 import StatBox from "../../components/StatBox";
+import Boxscore from "../Boxscore";
 
 
 const ExpandButton = ({to}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    console.log(to)
 
     return (
         <Button component={Link}  to={to} variant="h5" fontWeight="600" color= {colors.grey[100]}>
@@ -106,6 +106,16 @@ const Dashboard = () => {
                 <Box height="250px">
                     <PieChart></PieChart>
                 </Box>
+            </Box>
+        </Box>
+
+        <Box gridColumn="span 6" backgroundColor={colors.primary[400]}>
+            {/* Add back when you can work out the title */}
+            {/* <Box mt="20px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
+                <Typography variant="h4" fontWeight="600" color={colors.grey[100]}>Boxscore of objects on orbit in 2023</Typography>
+            </Box> */}
+            <Box>
+                <Boxscore></Boxscore>
             </Box>
         </Box>
     </Box>)
