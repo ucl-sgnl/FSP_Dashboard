@@ -13,8 +13,9 @@ import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined';
 import SettingsOverscanOutlinedIcon from '@mui/icons-material/SettingsOverscanOutlined';
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
-import PieChart from "../../components/PieChart";
+import PieChart from "../../components/PieChart";   
 import StatBox from "../../components/StatBox";
+import { LaunchByYear, YearlyStats } from "../../data/leoData";
 import { useState } from "react";
 
 const ExpandButton = ({to}) => {
@@ -38,7 +39,6 @@ const YearSelection = () => {
     // set possible years for the dashboard
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
-        // need to update the createDashboard state with the year of the button
     };
 
     return (
@@ -52,9 +52,9 @@ const YearSelection = () => {
                         onChange={handleChange}
                         aria-label="Platform"
                     >
-                        <ToggleButton value="2019">2019</ToggleButton>
-                        <ToggleButton value="2023">2023</ToggleButton>
-                        <ToggleButton value="2043">2043</ToggleButton>
+                        <ToggleButton onClick={e => createDashboard("2019")}>2019</ToggleButton>
+                        <ToggleButton onClick={e => createDashboard("2023")}>2023</ToggleButton>
+                        <ToggleButton onClick={e => createDashboard("2043")}>2043</ToggleButton>
                     </ToggleButtonGroup>
                     <Button sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: "14px", fontWeight: "bold", padding: "10px 20px",}}>
                         <FileDownloadOutlinedIcon sx={{ mr: "10px"}}/>
@@ -63,7 +63,6 @@ const YearSelection = () => {
             </Box>
             <Dashboard year={year}></Dashboard>
         </Box>
-
     );
     
 }
@@ -72,17 +71,6 @@ const YearSelection = () => {
 const Dashboard = ({ year }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-
-    console.log(year)
-
-    let data;
-    if (year === "2019") {
-        data = ["20, 646", "7, 243", "13, 403", "8, 167", "2, 780", "645"]
-    } else if (year === "2023") {      
-        data = ["22, 646", "2, 243", "60, 403", "800, 167", "2, 780", "11"]
-    } else if (year === "2043") {
-        data = ["24, 646", "1, 243", "90, 403", "10, 167", "20, 780", "122"]
-    }
 
     return (
     <Box m="20px"> 
@@ -93,7 +81,7 @@ const Dashboard = ({ year }) => {
         gridAutoRows = "140px"
         gap="20px">
             <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
-                <StatBox title="All Objects" subtitle={data[1]} icon={<WorkspacesOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="1"></StatBox>
+                <StatBox title="All Objects" subtitle="test" icon={<WorkspacesOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="1"></StatBox>
             </Box>
 
             <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
@@ -123,7 +111,7 @@ const Dashboard = ({ year }) => {
                     <ExpandButton to="/enlarger/line" />
                 </Box>
                 <Box height="250px">
-                    <LineChart></LineChart>
+                    <LineChart data={LaunchByYear} maxYear={year}></LineChart>
                 </Box>
             </Box>
 

@@ -1,15 +1,25 @@
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import { leoData } from "../data/leoData";
 
-const LineChart = ({ data, isCustomLineColors = false, isDashboard = false, years2019_2023 = false }) => {
+const LineChart = ({ data, maxYear, isCustomLineColors = false, isDashboard = false, years2019_2023 = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  // filter the nivo data to only be below the maxYear
+  const filteredData = data.map((d) => {
+    return {
+      id: d.id,
+      color: d.color,
+      data: d.data.filter((d) => d.x <= maxYear),
+    };
+  });
+
+
+
   return (
     <ResponsiveLine
-      data={data}
+      data={filteredData}
       theme={{
         axis: {
           domain: {
@@ -50,6 +60,7 @@ const LineChart = ({ data, isCustomLineColors = false, isDashboard = false, year
         type: "time", 
         format: '%Y-%m-%d', 
         precision: 'day',
+        max: `${maxYear}-12-12`
       }}
       xFormat="time:%Y-%m-%d"
       yScale={{
