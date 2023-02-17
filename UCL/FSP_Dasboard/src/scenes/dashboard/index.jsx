@@ -16,13 +16,12 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";   
 import StatBox from "../../components/StatBox";
-import { LaunchByYear, YearlyStats } from "../../data/leoData";
+import { LaunchByYear, YearlyStats, ObjectBreakDown } from "../../data/leoData";
 import { useState } from "react";
 import ScatterChart from "../../components/ScatterChart";
 import Modal from '@mui/material/Modal';
 import 'leaflet/dist/leaflet.css'
 import TextField from '@mui/material/TextField';
-
 
 const ExpandButton = ({to}) => {
     const theme = useTheme();
@@ -229,7 +228,7 @@ const Dashboard = ({ year }) => {
                 </Box>
                 <Box height="400px">
                     {/* <MapView isDashboard={true}></MapView> */}
-                    <PieChart></PieChart>
+                    <PieChart data={ObjectBreakDown} year={year}></PieChart>
                 </Box>
             </Box>
         </Box>

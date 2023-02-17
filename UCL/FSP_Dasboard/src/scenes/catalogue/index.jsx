@@ -20,7 +20,7 @@ const Catalogue = () => {
     return (
         <Box m="20px">
             <Header title="Contacts" subtitle="Manage Contact Information"></Header>
-            <Box m="40px 0 0 0" height="75vh" 
+            <Box m="40px 0 0 0" height="90vh" 
             // this allows you to change the mui style by changing their code
             sx={{
                 "& .MuiDataGrid-root": {

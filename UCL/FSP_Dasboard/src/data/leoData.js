@@ -42,3 +42,157 @@ export const YearlyStats = {
       "China": "672"
    }
 }
+
+export const ObjectBreakDown = {
+   "2019": [{
+      id: "Operational",
+      label: "hack",
+      value: 6813,
+      color: "hsl(147, 50%, 47%)",
+    },
+    {
+      id: "Non-Operational",
+      label: "make",
+      value: 1456,
+      color: "hsl(162, 70%, 50%)",
+    },
+    {
+      id: "Partially Operational",
+      label: "go",
+      value: 68,
+      color: "hsl(291, 70%, 50%)",
+    },
+    {
+      id: "Backup/Standby",
+      label: "lisp",
+      value: 12,
+      color: "hsl(229, 70%, 50%)",
+    },
+    {
+      id: "Spare",
+      label: "scala",
+      value: 7,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Extended Mission",
+      label: "scala",
+      value: 6,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Decayed",
+      label: "scala",
+      value: 8080,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Unknown",
+      label: "scala",
+      value: 0,
+      color: "hsl(344, 70%, 50%)",
+    }
+   ], 
+    "2023": [{
+      id: "Operational",
+      label: "hack",
+      value: 7161,
+      color: "hsl(147, 50%, 47%)",
+    },
+    {
+      id: "Non-Operational",
+      label: "make",
+      value: 1218,
+      color: "hsl(162, 70%, 50%)",
+    },
+    {
+      id: "Partially Operational",
+      label: "go",
+      value: 52,
+      color: "hsl(291, 70%, 50%)",
+    },
+    {
+      id: "Backup/Standby",
+      label: "lisp",
+      value: 14,
+      color: "hsl(229, 70%, 50%)",
+    },
+    {
+      id: "Spare",
+      label: "scala",
+      value: 10,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Extended Mission",
+      label: "scala",
+      value: 6,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Decayed",
+      label: "scala",
+      value: 8182,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Unknown",
+      label: "scala",
+      value: 4003,
+      color: "hsl(344, 70%, 50%)",
+    }
+   ], 
+   "2023": [{
+      id: "Operational",
+      label: "hack",
+      value: 3908,
+      color: "hsl(147, 50%, 47%)",
+    },
+    {
+      id: "Non-Operational",
+      label: "make",
+      value: 1243,
+      color: "hsl(162, 70%, 50%)",
+    },
+    {
+      id: "Partially Operational",
+      label: "go",
+      value: 51,
+      color: "hsl(291, 70%, 50%)",
+    },
+    {
+      id: "Backup/Standby",
+      label: "lisp",
+      value: 14,
+      color: "hsl(229, 70%, 50%)",
+    },
+    {
+      id: "Spare",
+      label: "scala",
+      value: 10,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Extended Mission",
+      label: "scala",
+      value: 6,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Decayed",
+      label: "scala",
+      value: 20446,
+      color: "hsl(344, 70%, 50%)",
+    },
+    {
+      id: "Unknown",
+      label: "scala",
+      value: 4877,
+      color: "hsl(344, 70%, 50%)",
+    }
+   ]
+}
+
+const data = [
+   ,
+ ];
