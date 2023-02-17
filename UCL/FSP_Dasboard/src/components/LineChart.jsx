@@ -1,8 +1,9 @@
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
+import { data } from "../data/leoData";
 
-const LineChart = ({ data, maxYear, isCustomLineColors = false, isDashboard = false, years2019_2023 = false }) => {
+const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, years2019_2023 = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -15,10 +16,9 @@ const LineChart = ({ data, maxYear, isCustomLineColors = false, isDashboard = fa
     };
   });
 
-
-
   return (
     <ResponsiveLine
+      // data={enlarger ? filteredData : data}
       data={filteredData}
       theme={{
         axis: {

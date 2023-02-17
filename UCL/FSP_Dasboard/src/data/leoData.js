@@ -16,30 +16,29 @@ export const LaunchByYear = [{
     "data": [{"x":"1958-01-01","PERIGEE":"HEO","y":1},{"x":"1962-01-01","PERIGEE":"HEO","y":4},{"x":"1963-01-01","PERIGEE":"HEO","y":4},{"x":"1964-01-01","PERIGEE":"HEO","y":5},{"x":"1965-01-01","PERIGEE":"HEO","y":6},{"x":"1966-01-01","PERIGEE":"HEO","y":6},{"x":"1967-01-01","PERIGEE":"HEO","y":5},{"x":"1968-01-01","PERIGEE":"HEO","y":5},{"x":"1969-01-01","PERIGEE":"HEO","y":6},{"x":"1970-01-01","PERIGEE":"HEO","y":3},{"x":"1971-01-01","PERIGEE":"HEO","y":4},{"x":"1972-01-01","PERIGEE":"HEO","y":4},{"x":"1973-01-01","PERIGEE":"HEO","y":2},{"x":"1974-01-01","PERIGEE":"HEO","y":6},{"x":"1975-01-01","PERIGEE":"HEO","y":10},{"x":"1976-01-01","PERIGEE":"HEO","y":6},{"x":"1977-01-01","PERIGEE":"HEO","y":16},{"x":"1978-01-01","PERIGEE":"HEO","y":14},{"x":"1979-01-01","PERIGEE":"HEO","y":5},{"x":"1980-01-01","PERIGEE":"HEO","y":12},{"x":"1981-01-01","PERIGEE":"HEO","y":18},{"x":"1982-01-01","PERIGEE":"HEO","y":12},{"x":"1983-01-01","PERIGEE":"HEO","y":12},{"x":"1984-01-01","PERIGEE":"HEO","y":28},{"x":"1985-01-01","PERIGEE":"HEO","y":34},{"x":"1986-01-01","PERIGEE":"HEO","y":15},{"x":"1987-01-01","PERIGEE":"HEO","y":8},{"x":"1988-01-01","PERIGEE":"HEO","y":16},{"x":"1989-01-01","PERIGEE":"HEO","y":32},{"x":"1990-01-01","PERIGEE":"HEO","y":19},{"x":"1991-01-01","PERIGEE":"HEO","y":17},{"x":"1992-01-01","PERIGEE":"HEO","y":12},{"x":"1993-01-01","PERIGEE":"HEO","y":12},{"x":"1994-01-01","PERIGEE":"HEO","y":16},{"x":"1995-01-01","PERIGEE":"HEO","y":18},{"x":"1996-01-01","PERIGEE":"HEO","y":16},{"x":"1997-01-01","PERIGEE":"HEO","y":19},{"x":"1998-01-01","PERIGEE":"HEO","y":14},{"x":"1999-01-01","PERIGEE":"HEO","y":18},{"x":"2000-01-01","PERIGEE":"HEO","y":25},{"x":"2001-01-01","PERIGEE":"HEO","y":9},{"x":"2002-01-01","PERIGEE":"HEO","y":16},{"x":"2003-01-01","PERIGEE":"HEO","y":10},{"x":"2004-01-01","PERIGEE":"HEO","y":14},{"x":"2005-01-01","PERIGEE":"HEO","y":15},{"x":"2006-01-01","PERIGEE":"HEO","y":25},{"x":"2007-01-01","PERIGEE":"HEO","y":18},{"x":"2008-01-01","PERIGEE":"HEO","y":26},{"x":"2009-01-01","PERIGEE":"HEO","y":29},{"x":"2010-01-01","PERIGEE":"HEO","y":25},{"x":"2011-01-01","PERIGEE":"HEO","y":15},{"x":"2012-01-01","PERIGEE":"HEO","y":24},{"x":"2013-01-01","PERIGEE":"HEO","y":17},{"x":"2014-01-01","PERIGEE":"HEO","y":21},{"x":"2015-01-01","PERIGEE":"HEO","y":28},{"x":"2016-01-01","PERIGEE":"HEO","y":21},{"x":"2017-01-01","PERIGEE":"HEO","y":22},{"x":"2018-01-01","PERIGEE":"HEO","y":19},{"x":"2019-01-01","PERIGEE":"HEO","y":8}] 
 }];
 
-export const YearlyStats = [
-   {
-      "year": "2019",
+export const YearlyStats = {
+   "2019": {
       "allObjects": "15, 106",
       "activeSatellites": "5, 854",
       "debrisObjects": "408",
       "totalDecayed": "496",
       "Starlink": "120",
       "OneWeb": "6"
-   },{
-      "year": "2023",
+   }, 
+   "2023": {
       "allObjects": "20, 646",
       "activeSatellites": "7. 243",
       "debrisObjects": "13, 403",
       "totalDecayed": "8, 167",
       "Starlink": "2, 780",
       "OneWeb": "645"
-   },{
-      "year": "2043",
-      "allObjects": "30, 555",
-      "activeSatellites": "2, 958",
-      "debrisObjects": "7, 058",
-      "totalDecayed": "15, 438",
+   },
+   "2043": {
+      "allObjects": "20, 646",
+      "activeSatellites": "7. 243",
+      "debrisObjects": "13, 403",
+      "totalDecayed": "8, 167",
       "USA": "923",
       "China": "672"
-   },
-]
+   }
+}

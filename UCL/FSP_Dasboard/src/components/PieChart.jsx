@@ -4,31 +4,31 @@ import { useTheme } from "@mui/material";
 
 const data = [
   {
-    id: "hack",
+    id: "Payload",
     label: "hack",
     value: 239,
     color: "hsl(104, 70%, 50%)",
   },
   {
-    id: "make",
+    id: "Debris",
     label: "make",
     value: 170,
     color: "hsl(162, 70%, 50%)",
   },
   {
-    id: "go",
+    id: "Unknown",
     label: "go",
     value: 322,
     color: "hsl(291, 70%, 50%)",
   },
   {
-    id: "lisp",
+    id: "Fragment",
     label: "lisp",
     value: 503,
     color: "hsl(229, 70%, 50%)",
   },
   {
-    id: "scala",
+    id: "Operational",
     label: "scala",
     value: 584,
     color: "hsl(344, 70%, 50%)",

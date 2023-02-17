@@ -4,7 +4,7 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";
 import MapView from "../../components/MapView";
-import Button from "@mui/material/Button";
+import ScatterChart from "../../components/ScatterChart";
 import { useParams } from "react-router-dom";
 
 const EnlargedItem = () => {
@@ -16,13 +16,15 @@ const EnlargedItem = () => {
 
     console.log(graph);
     if (graph == "line") {
-        props = <LineChart />
+        props = <LineChart enlarger={true} />
     } else if (graph === "bar") {
         props = <BarChart />
     } else if (graph === "pie") {
         props = <PieChart />
     } else if (graph === "map") {
         props = <MapView />
+    } else if (graph === "scatter") {
+        props = <ScatterChart />
     }
 
     return (
