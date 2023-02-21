@@ -6,15 +6,15 @@ import { data } from "../data/leoData";
 const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, years2019_2023 = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
   // filter the nivo data to only be below the maxYear
   const filteredData = data.map((d) => {
     return {
       id: d.id,
       color: d.color,
-      data: d.data.filter((d) => d.x <= maxYear),
+      data: d.data.filter((d) => d.x <= `${maxYear}-01-01`),
     };
   });
+
 
   return (
     <ResponsiveLine

@@ -217,7 +217,7 @@ const Dashboard = ({ year }) => {
                     <ExpandButton to="/enlarger/scatter"/>
                 </Box>
                 <Box height="400px">
-                    <ScatterChart></ScatterChart>
+                    <ScatterChart maxYear={year.toString()}></ScatterChart>
                 </Box>
             </Box>
 
