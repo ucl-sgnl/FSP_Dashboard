@@ -72,22 +72,22 @@ const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, TLE =
       curve="catmullRom"
       axisTop={null}
       axisRight={null}
-      axisBottom={TLE ? null : {
+      axisBottom={TLE ? {orient: "bottom"} : {
         format: '%Y',
         tickValues: 'every 10 years',
         legendOffset: -12,
-    }}
-      axisBottom={{
-        orient: "bottom",
-        tickSize: 0,
-        tickValues: 10,
-        tickCount: isDashboard ? 10 : 5, // added
-        tickPadding: 5,
-        tickRotation: 40,
-        legend: isDashboard ? undefined : "transportation", // added
-        legendOffset: 36,
-        legendPosition: "middle"
       }}
+      // axisBottom={{
+      //   orient: "bottom",
+      //   tickSize: 0,
+      //   tickValues: 10,
+      //   tickCount: isDashboard ? 10 : 5, // added
+      //   tickPadding: 5,
+      //   tickRotation: 40,
+      //   legend: isDashboard ? undefined : "transportation", // added
+      //   legendOffset: 36,
+      //   legendPosition: "middle"
+      // }}
       axisLeft={{
         orient: "left",
         tickValues: 5, // added
@@ -97,11 +97,10 @@ const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, TLE =
         legend: isDashboard ? undefined : "count", // added
         legendOffset: -40,
         legendPosition: "middle",
-      }}
+        }}
       enableGridX={false}
       enableGridY={false}
       pointSize={0}
-      pointColor={{ theme: "background" }}
       pointBorderWidth={2}
       pointBorderColor={{ from: "serieColor" }}
       pointLabelYOffset={-12}
@@ -132,6 +131,31 @@ const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, TLE =
           ],
         },
       ]}
+      // enableSlices="x"
+      sliceTooltip={({ slice }) => {
+            return (
+                <div
+                    style={{
+                        background: 'white',
+                        padding: '9px 12px',
+                        border: '1px solid #ccc',
+                    }}
+                >
+                    <div>x: {slice.id}</div>
+                    {slice.points.map(point => (
+                        <div
+                            key={point.id}
+                            style={{
+                                color: point.serieColor,
+                                padding: '3px 0',
+                            }}
+                        >
+                            <strong>{point.serieId}</strong> [{point.data.yFormatted}]
+                        </div>
+                    ))}
+                </div>
+            )
+        }}
     />
   );
 };
