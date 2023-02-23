@@ -55,12 +55,14 @@ const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, TLE =
         },
       }}
       enableArea={true}
-      colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }}
+      colors={ 
+        isDashboard ? { datum: "color" } : { scheme: "nivo" }
+      }
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
       xScale={
-        TLE ? { type: "linear", min: "auto", max: "auto", stacked: true, reverse: false} : { type: "time", format: '%Y-%m-%d', precision: 'day', max: `${maxYear}-12-12`}
+        TLE ? { type: "point", min: "auto", max: "auto", stacked: true, reverse: false} : { type: "time", format: '%Y-%m-%d', precision: 'day', max: `${maxYear}-12-12`}
       }
-      xFormat={ TLE ? " >-.2f" : "time:%Y-%m-%d"}
+      xFormat={ TLE ? ">-.2g" : "time:%Y-%m-%d"}
       yScale={{
         type: "linear",
         min: "auto",
@@ -68,26 +70,19 @@ const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, TLE =
         stacked: true,
         reverse: false,
       }}
-      yFormat=" >-.2f"
+      yFormat=" >-.2g"
       curve="catmullRom"
       axisTop={null}
       axisRight={null}
-      axisBottom={TLE ? {orient: "bottom"} : {
+      axisBottom={TLE ? {
+        orient: "bottom", 
+        tickValues:  [59973.475486110896, 59975.312291666865],
+        legendOffset: -12,
+      } : {
         format: '%Y',
         tickValues: 'every 10 years',
         legendOffset: -12,
       }}
-      // axisBottom={{
-      //   orient: "bottom",
-      //   tickSize: 0,
-      //   tickValues: 10,
-      //   tickCount: isDashboard ? 10 : 5, // added
-      //   tickPadding: 5,
-      //   tickRotation: 40,
-      //   legend: isDashboard ? undefined : "transportation", // added
-      //   legendOffset: 36,
-      //   legendPosition: "middle"
-      // }}
       axisLeft={{
         orient: "left",
         tickValues: 5, // added
@@ -131,31 +126,6 @@ const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, TLE =
           ],
         },
       ]}
-      // enableSlices="x"
-      sliceTooltip={({ slice }) => {
-            return (
-                <div
-                    style={{
-                        background: 'white',
-                        padding: '9px 12px',
-                        border: '1px solid #ccc',
-                    }}
-                >
-                    <div>x: {slice.id}</div>
-                    {slice.points.map(point => (
-                        <div
-                            key={point.id}
-                            style={{
-                                color: point.serieColor,
-                                padding: '3px 0',
-                            }}
-                        >
-                            <strong>{point.serieId}</strong> [{point.data.yFormatted}]
-                        </div>
-                    ))}
-                </div>
-            )
-        }}
     />
   );
 };
