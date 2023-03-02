@@ -10,7 +10,6 @@ import Catalogue from './scenes/catalogue';
 import EnlargedItem from './scenes/enlargeditem';
 import Globe from './scenes/globe';
 import FAQ from './scenes/faq';
-// import Calender from './scenes/calender';
 import { BarChart } from '@mui/icons-material';
 
 
