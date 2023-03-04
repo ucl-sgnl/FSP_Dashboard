@@ -10,7 +10,6 @@ import Catalogue from './scenes/catalogue';
 import EnlargedItem from './scenes/enlargeditem';
 import Globe from './scenes/globe';
 import FAQ from './scenes/faq';
-import { BarChart } from '@mui/icons-material';
 
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
                             <Route path="/globe" element={<Globe />} />
                             <Route path="/enlarger/:graph" element={<EnlargedItem />} />
                             <Route path="/faq" element={<FAQ />} />
-                            {/* <Route path="/calender" element={<Calender />} /> */}
                         </Routes>
                     </main>
                 </div>

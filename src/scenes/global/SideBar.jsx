@@ -7,14 +7,8 @@ import { useContext } from 'react';
 import { ColorModeContext, tokens } from '../../theme';
 import Typography from '@mui/material/Typography';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import TimelineIcon from '@mui/icons-material/Timeline';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import DataArrayOutlinedIcon from '@mui/icons-material/DataArrayOutlined';
 import LiveHelpOutlinedIcon from '@mui/icons-material/LiveHelpOutlined';
 import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
@@ -23,7 +17,6 @@ import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const colorMode = useContext(ColorModeContext);
 
     return (
         <MenuItem 

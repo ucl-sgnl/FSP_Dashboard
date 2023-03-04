@@ -1,4 +1,3 @@
-import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
