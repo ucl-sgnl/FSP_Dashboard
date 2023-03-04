@@ -1,7 +1,11 @@
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-import { Viewer, Entity, GeoJsonDataSource } from "resium";
+import { Viewer, Entity, GeoJsonDataSource, PointPrimitiveCollection } from "resium";
 import { Color } from "cesium";
+
+let CesiumInitalConditions = {
+  
+}
 
 
 const Globe = () => {
@@ -21,12 +25,16 @@ const Globe = () => {
       },
     };
 
+
+
   return (
         <Viewer full>
           <GeoJsonDataSource
             data={data}
             markerColor={Color.RED}
             />
+            <PointPrimitiveCollection>
+            </PointPrimitiveCollection>
         </Viewer>
   );
 }
