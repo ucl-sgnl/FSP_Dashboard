@@ -31,7 +31,6 @@ function App() {
                             <Route path="/globe" element={<Globe />} />
                             <Route path="/enlarger/:graph" element={<EnlargedItem />} />
                             <Route path="/faq" element={<FAQ />} />
-                            {/* <Route path="/calender" element={<Calender />} /> */}
                         </Routes>
                     </main>
                 </div>
