@@ -192,7 +192,3 @@ export const ObjectBreakDown = {
     }
    ]
 }
-
-const data = [
-   ,
- ];

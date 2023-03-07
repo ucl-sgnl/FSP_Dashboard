@@ -1,7 +1,6 @@
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import { data } from "../data/leoData";
 
 const LineChart = ({ data, maxYear, enlarger = false, isDashboard = false, years2019_2023 = false }) => {
   const theme = useTheme();

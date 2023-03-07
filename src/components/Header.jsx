@@ -1,4 +1,4 @@
-import { Typography, Box, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { tokens } from "../theme";
 import Button from "@mui/material/Button";

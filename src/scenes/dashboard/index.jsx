@@ -20,7 +20,6 @@ import { LaunchByYear, YearlyStats, ObjectBreakDown } from "../../data/leoData";
 import { useState } from "react";
 import ScatterChart from "../../components/ScatterChart";
 import Modal from '@mui/material/Modal';
-import 'leaflet/dist/leaflet.css'
 import TextField from '@mui/material/TextField';
 
 const ExpandButton = ({to}) => {

@@ -15,7 +15,7 @@ const EnlargedItem = () => {
     let props;
 
     console.log(graph);
-    if (graph == "line") {
+    if (graph === "line") {
         props = <LineChart enlarger={true} />
     } else if (graph === "bar") {
         props = <BarChart />

@@ -1,16 +1,7 @@
-import { Box, useTheme } from "@mui/material";
-import { tokens } from "../../theme";
-import { Viewer, Entity, GeoJsonDataSource, PointPrimitiveCollection } from "resium";
+import { Viewer, GeoJsonDataSource, PointPrimitiveCollection } from "resium";
 import { Color } from "cesium";
 
-let CesiumInitalConditions = {
-  
-}
-
-
 const Globe = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   const data = {
       type: "Feature",
