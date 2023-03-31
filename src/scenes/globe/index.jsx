@@ -29,6 +29,7 @@ const Globe = () => {
 
   return (
         <Viewer full>
+          
           <GeoJsonDataSource
             data={data}
             markerColor={Color.RED}
