@@ -168,7 +168,7 @@ const SideBar = () => {
 
                         <Item 
                         title="Orbital View" 
-                        to="/globe" 
+                        to="https://ucl-sgnl.bitbucket.io/fspviz/fspviz.html" 
                         icon={<PublicOutlinedIcon/>} 
                         selected={selected} 
                         setSelected={setSelected} />
