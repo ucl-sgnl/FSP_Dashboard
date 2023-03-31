@@ -78,68 +78,6 @@ const YearSelection = () => {
                         <ToggleButton value= "2023" onClick={e => createDashboard("2023")}>2023</ToggleButton>
                         <ToggleButton value= "2043" onClick={e => createDashboard("2043")}>2043</ToggleButton>
                     </ToggleButtonGroup>
-                    <Button onClick={handleOpen} sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: "14px", fontWeight: "bold", padding: "10px 20px",}}>
-                        <AccountTreeOutlinedIcon sx={{ mr: "10px"}}/>
-                        Create new CLUE
-                    </Button>
-                    <Modal
-                        open={open}
-                        onClose={handleClose}
-                        aria-labelledby="modal-modal-title"
-                        aria-describedby="modal-modal-description"
-                    >
-                        <Box sx={style}
-                            component="form"
-                            noValidate
-                            autoComplete="off">
-                            <Typography id="modal-modal-title" variant="h6" component="h2">
-                                Create new CLUE
-                            </Typography>
-                            <div>
-                            <TextField
-                                margin="10px"
-                                required
-                                id="outlined-required"
-                                label="Required"
-                                defaultValue="Upload Satellite"
-                                />
-                                <TextField
-                                disabled
-                                id="outlined-required"
-                                label="Simulation Name"
-                                />
-                                <TextField
-                                id="outlined-password-input"
-                                label="ID"
-                                type="password"
-                                autoComplete="current-password"
-                                />
-                                <TextField
-                                id="outlined-read-only-input"
-                                label="End Year Date"
-                                defaultValue="2030"
-                                InputProps={{
-                                    readOnly: true,
-                                }}
-                                />
-                                <TextField
-                                id="outlined-number"
-                                label="Number of Monte Carlo Runs"
-                                type="number"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}
-                                />
-                            </div>
-                            <div margin="10px" width="50%">
-                                <Button onClick={handleClose}
-                                sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: "14px", fontWeight: "bold", padding: "10px 20px",}}>
-                                    <AccountTreeOutlinedIcon sx={{ mr: "10px"}}/>
-                                    Run Simulation
-                                </Button>
-                            </div>   
-                        </Box>
-                    </Modal>
                     <Button sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: "14px", fontWeight: "bold", padding: "10px 20px",}}>
                         <FileDownloadOutlinedIcon sx={{ mr: "10px"}}/>
                         Download Report
@@ -163,7 +101,8 @@ const Dashboard = ({ year }) => {
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows = "140px"
-        gap="20px">
+        gap="20px"
+        >
             <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title="All Objects" subtitle={metaInfo["allObjects"]} icon={<WorkspacesOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="1"></StatBox>
             </Box>

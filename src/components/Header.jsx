@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, useTheme, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
 import { tokens } from "../theme";
 import Button from "@mui/material/Button";
@@ -11,12 +11,18 @@ const Header = ({title, subtitle, enlarger = false}) => {
     return (
         <Box mb="30px">
             {/* Eventually include a dynamic title */}
-            {/* <Typography variant="h3" 
+            <Typography variant="h3" 
             color={colors.greenAccent[100]}
             fontWeight="bold"
             sx={{ mb: "5px" }}
-            >{title}</Typography> */}
+            >{title}</Typography>
 
+            <Typography variant="h3" 
+            color={colors.greenAccent[100]}
+            fontWeight="bold"
+            sx={{ mb: "5px" }}
+            >{subtitle}</Typography>
+            
             {enlarger && 
                 <Button component={Link} to={'/'} sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontsize: "14px", fontWeight: "bold", padding: "10px 20px", alignContent: "right"}}>
                     <ArrowBackOutlinedIcon sx={{ mr: "10px"}}/>
