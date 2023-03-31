@@ -9,7 +9,8 @@ import Boxscore from './scenes/Boxscore';
 import Catalogue from './scenes/catalogue';
 import EnlargedItem from './scenes/enlargeditem';
 import Globe from './scenes/globe';
-import FAQ from './scenes/faq';
+import FAQ from './scenes/About/faq';
+import AboutUs from './scenes/About/about';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                             <Route path="/globe" element={<Globe />} />
                             <Route path="/enlarger/:graph" element={<EnlargedItem />} />
                             <Route path="/faq" element={<FAQ />} />
+                            <Route path="/about" element={<AboutUs />} />
                         </Routes>
                     </main>
                 </div>

@@ -41,3 +41,11 @@
   width: 50%;
   display: flex-start;
 }
+
+.SideBar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+}
