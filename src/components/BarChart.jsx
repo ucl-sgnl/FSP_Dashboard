@@ -1,6 +1,5 @@
 // used in the component file as it will be in more than one location
 import { useTheme } from "@mui/material";
-import { color } from "@mui/system";
 import { ResponsiveBar } from "@nivo/bar";
 import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockData";
