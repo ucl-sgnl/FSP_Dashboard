@@ -11,7 +11,6 @@ import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SatelliteAltOutlinedIcon from '@mui/icons-material/SatelliteAltOutlined';
 import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined';
 import SettingsOverscanOutlinedIcon from '@mui/icons-material/SettingsOverscanOutlined';
-import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";   
@@ -19,8 +18,6 @@ import StatBox from "../../components/StatBox";
 import { LaunchByYear, YearlyStats, ObjectBreakDown } from "../../data/leoData";
 import { useState } from "react";
 import ScatterChart from "../../components/ScatterChart";
-import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
 
 const ExpandButton = ({to}) => {
     const theme = useTheme();
