@@ -1,5 +1,4 @@
-import { Box, useTheme } from "@mui/material";
-import { tokens } from "../../../theme";
+import { Box } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -11,7 +10,6 @@ import Header from "../../../components/Header";
 
 
 const AboutUs = () => {
-
     return(
         <Box m="20px" justifyContent="center" alignItems="center">
             <Box sx={{flexGrow: 1}} m="25px">
