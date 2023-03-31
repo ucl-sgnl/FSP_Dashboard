@@ -11,7 +11,6 @@ import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SatelliteAltOutlinedIcon from '@mui/icons-material/SatelliteAltOutlined';
 import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined';
 import SettingsOverscanOutlinedIcon from '@mui/icons-material/SettingsOverscanOutlined';
-import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";   
@@ -19,8 +18,6 @@ import StatBox from "../../components/StatBox";
 import { LaunchByYear, YearlyStats, ObjectBreakDown } from "../../data/leoData";
 import { useState } from "react";
 import ScatterChart from "../../components/ScatterChart";
-import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
 
 const ExpandButton = ({to}) => {
     const theme = useTheme();
@@ -33,19 +30,6 @@ const ExpandButton = ({to}) => {
     )
 }
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 1000,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-    '& .MuiTextField-root': { m: 1, width: '25ch' },
-  };
-
 const YearSelection = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -57,11 +41,6 @@ const YearSelection = () => {
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
     };
-
-    // logic for the modals
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
 
     return (
         <Box margin="20px">

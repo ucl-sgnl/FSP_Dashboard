@@ -11,8 +11,6 @@ import Header from "../../../components/Header";
 
 
 const AboutUs = () => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
 
     return(
         <Box m="20px" justifyContent="center" alignItems="center">
