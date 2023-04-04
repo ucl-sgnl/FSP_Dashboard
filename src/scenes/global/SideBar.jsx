@@ -40,7 +40,9 @@ const SideBar = () => {
         <Box 
         sx={{
             "& .pro-sidebar": {
-                background:`${colors.primary[400]} !important`
+                background:`${colors.primary[400]} !important`,
+                maxHeight: "100vh",
+                overflow: "auto", 
             },
             "& .pro-icon-wrapper": {
               backgroundColor: "transparent !important",
@@ -114,49 +116,24 @@ const SideBar = () => {
 
                     {/* Menu items */}
                     <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-
-                        {/* <Typography
-                        variant="h6"
-                        color={colors.grey[300]}
-                        sx={{ m: "15px 0 5px 20px" }}
-                        >
-                        Data
-                        </Typography>
-
-                        <Item 
-                        title="Orbital View" 
-                        to="/globe" 
-                        icon={<PublicOutlinedIcon/>} 
-                        selected={selected} 
-                        setSelected={setSelected} />
-
-
-                        <Item 
-                        title="Contacts Information" 
-                        to="/contacts" 
-                        icon={<ContactsOutlinedIcon />} 
-                        selected={selected} 
-                        setSelected={setSelected} />
-                         */}
-
                         {isCollapsed && (
-                        <Typography
-                        variant="h6"
-                        color={colors.grey[300]}
-                        sx={{ m: "15px 0 5px 20px" }}
-                        >
-                        FSP
-                        </Typography>
+                            <Typography
+                            variant="h6"
+                            color={colors.grey[300]}
+                            sx={{ m: "15px 0 5px 20px" }}
+                            >
+                            FSP
+                            </Typography>
                         )}
 
                         {!isCollapsed && (
-                        <Typography
-                        variant="h6"
-                        color={colors.grey[300]}
-                        sx={{ m: "15px 0 5px 20px" }}
-                        >
-                        Future Space Populations
-                        </Typography>
+                            <Typography
+                            variant="h6"
+                            color={colors.grey[300]}
+                            sx={{ m: "15px 0 5px 20px" }}
+                            >
+                            Future Space Populations
+                            </Typography>
                         )}
              
                         <Item 

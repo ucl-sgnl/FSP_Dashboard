@@ -22,7 +22,7 @@ function App() {
                 <CssBaseline />
                 <div className="app">
                     <SideBar/>
-                    <main className='content'>
+                    <main className='content' style={{overflowY: 'scroll'}}>
                         <TopBar/>
                         <Routes>
                             <Route path="/" element={<Dashboard />} />
