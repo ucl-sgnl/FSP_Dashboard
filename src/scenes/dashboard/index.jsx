@@ -83,30 +83,30 @@ const Dashboard = ({ year }) => {
         gap="20px"
         sx={{flexGrow: 1, flexWrap: 'wrap'}}
         >
+            {/* Row 1 */}
             <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title="All Objects" subtitle={metaInfo["allObjects"]} icon={<WorkspacesOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="1"></StatBox>
-            </Box>
+                </Box>
 
-            <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
+                <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title="Launched Payloads" subtitle={metaInfo["activeSatellites"]} icon={<RocketLaunchOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="0.35" increase="35%"></StatBox>
-            </Box>
+                </Box>
 
-            <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
+                <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title="Total Debris" subtitle={metaInfo["debrisObjects"]} icon={<DeleteOutlineOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="0.64" increase="64%"></StatBox>
-            </Box>
+                </Box>
 
-            <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
+                <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title="Total Decayed" subtitle={metaInfo["totalDecayed"]} icon={<WhatshotOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="0.40" increase="40%"></StatBox>
-            </Box>
+                </Box>
 
-            <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
+                <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title={ year === "2043" ? "USA" : "Starlink"} subtitle={year === "2043" ? metaInfo["USA"]: metaInfo["Starlink"]} icon={<SatelliteAltOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="0.13" increase="13%"></StatBox>
-            </Box>
+                </Box>
 
-            <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
+                <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title={ year === "2043" ? "China" : "Oneweb"} subtitle={year === "2043" ? metaInfo["China"]: metaInfo["OneWeb"]}  icon={<SatelliteAltOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="0.03" increase="3%"></StatBox>
-            </Box>
-
+                </Box>
             {/* Row 2 */}
             <Box gridColumn= "span 8" gridRow="span 2" backgroundColor={colors.primary[400]}>
                 <Box mt="20px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
