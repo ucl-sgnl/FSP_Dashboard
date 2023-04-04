@@ -74,13 +74,14 @@ const Dashboard = ({ year }) => {
     let metaInfo = YearlyStats[year];
     
     return (
-    <Box m="20px"> 
+    <Box  m="25px"> 
         {/* Grids and charts */}
         <Box 
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows = "140px"
         gap="20px"
+        sx={{flexGrow: 1, flexWrap: 'wrap'}}
         >
             <Box gridColumn="span 2" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
                 <StatBox title="All Objects" subtitle={metaInfo["allObjects"]} icon={<WorkspacesOutlinedIcon sx={{color: colors.grey[100], fontSize: "50px"}}/>} progress="1"></StatBox>
